@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وكالة دار الفنون للدعاية والإعلان</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --navy: #172554;
+  --blue: #3867d6;
+  --teal: #16a6a1;
+  --orange: #ff8a45;
+  --purple: #8064d8;
+  --cream: #f7f8fc;
+  --ink: #202944;
+  --muted: #737d91;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+header {
+  background: rgba(255,255,255,.94);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 25px #1725540b;
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.logo span { color: var(--orange); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a:hover { color: var(--teal); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-btn, .contact-btn {
+  border: 0;
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.lang-btn {
+  background: #edf1fb;
+  color: var(--navy);
+}
+
+.contact-btn {
+  background: var(--orange);
+  color: white;
+}
+
+.hero {
+  padding: 85px 0 75px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, #16a6a125, transparent 28%),
+    radial-gradient(circle at 90% 80%, #ff8a4525, transparent 28%),
+    linear-gradient(135deg, #f4f6ff, #fff8f1);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: #16a6a118;
+  color: var(--teal);
+  padding: 8px 17px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.45;
+  color: var(--navy);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.hero h1 span { color: var(--orange); }
+
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 2;
+  max-width: 570px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.main-btn, .second-btn {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 30px;
+  font-weight: 800;
+  transition: .25s;
+}
+
+.main-btn {
+  color: white;
+  background: var(--blue);
+  box-shadow: 0 9px 22px #3867d633;
+}
+
+.second-btn {
+  color: var(--navy);
+  background: white;
+  border: 1px solid #e4e8f2;
+}
+
+.main-btn:hover, .second-btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero-art {
+  min-height: 330px;
+  border-radius: 35px;
+  background: linear-gradient(145deg, var(--blue), var(--purple));
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 25px 55px #3867d633;
+}
+
+.hero-art::before, .hero-art::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff18;
+}
+
+.hero-art::before {
+  width: 260px;
+  height: 260px;
+  top: -80px;
+  left: -50px;
+}
+
+.hero-art::after {
+  width: 190px;
+  height: 190px;
+  bottom: -70px;
+  right: -35px;
+}
+
+.art-text {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.art-text .symbol {
+  font-size: 85px;
+  line-height: 1.3;
+}
+
+.art-text h2 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.art-text p {
+  color: #ffffffd9;
+  font-size: 15px;
+  margin: 5px 0 0;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading small {
+  color: var(--teal);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.section-heading h2 {
+  color: var(--navy);
+  font-size: clamp(27px, 4vw, 38px);
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 800px) {
+  .nav-links { display: none; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero { padding: 55px 0; }
+  .hero-art { min-height: 260px; }
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 18px; }
+  .lang-btn, .contact-btn { padding: 8px 12px; font-size: 12px; }
+  .hero p { font-size: 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#">دار <span>الفنون</span></a>
+
+    <nav class="nav-links">
+      <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+      <a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+      <a href="#gallery" data-ar="أعمالنا" data-en="Gallery">أعمالنا</a>
+      <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+      <a class="contact-btn" href="#contact" data-ar="اطلب خدمتك" data-en="Get in touch">اطلب خدمتك</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div>
+      <span class="hero-tag" data-ar="نحو أفكار تلفت الأنظار" data-en="Ideas that stand out">نحو أفكار تلفت الأنظار</span>
+      <h1 data-ar="نحوّل أفكارك إلى <span>إبداع يُرى</span>" data-en="Turning your ideas into <span>visible creativity</span>">
+        نحوّل أفكارك إلى <span>إبداع يُرى</span>
+      </h1>
+      <p data-ar="في دار الفنون نصنع حلول الدعاية والإعلان والطباعة واللوحات بتصميمات مميزة وجودة تهتم بأدق التفاصيل." data-en="At Dar Al فنون, we create advertising, printing and signage solutions with distinctive designs and attention to every detail.">
+        في دار الفنون نصنع حلول الدعاية والإعلان والطباعة واللوحات بتصميمات مميزة وجودة تهتم بأدق التفاصيل.
+      </p>
+      <div class="hero-buttons">
+        <a class="main-btn" href="#gallery" data-ar="شاهد أعمالنا" data-en="Explore our work">شاهدأعمالنا</a>
+        <a class="second-btn" href="#services" data-ar="اكتشف خدماتنا" data-en="Our services">اكتشف خدماتنا</a>
+      </div>
+
+    </div>
+
+    <div class="hero-art">
+      <div class="art-text">
+        <div class="symbol">✦</div>
+        <h2>دار الفنون</h2>
+        <p data-ar="إبداع • جودة • تميز" data-en="Creativity • Quality • Excellence">إبداع • جودة • تميز</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ABOUT SECTION -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-heading">
+      <small data-ar="حكايتنا" data-en="OUR STORY">حكايتنا</small>
+      <h2 data-ar="الإبداع يبدأ من هنا" data-en="Creativity starts here">الإبداع يبدأ من هنا</h2>
+      <p data-ar="نؤمن أن كل فكرة تستحق أن تظهر بأفضل صورة." data-en="We believe every idea deserves to be seen at its best.">
+        نؤمن أن كل فكرة تستحق أن تظهر بأفضل صورة.
+      </p>
+    </div>
+    <div class="about-box">
+      <div class="about-icon">✦</div>
+      <div>
+        <h3 data-ar="وكالة دار الفنون للدعاية والإعلان" data-en="Dar Al Funoon Advertising Agency">
+          وكالة دار الفنون للدعاية والإعلان
+        </h3>
+        <p data-ar="نقدم مجموعة متكاملة من خدمات الدعاية والإعلان والطباعة واللوحات والمجسمات، لنساعدك على إبراز علامتك التجارية بأفكار مبتكرة وتنفيذ مميز."
+           data-en="We offer a complete range of advertising, printing, signage and 3D display services to help your brand stand out through creative ideas and quality execution.">
+          نقدم مجموعة متكاملة من خدمات الدعاية والإعلان والطباعة واللوحات والمجسمات، لنساعدك على إبراز علامتك التجارية بأفكار مبتكرة وتنفيذ مميز.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services-section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <small data-ar="ماذا نقدم؟" data-en="WHAT WE DO">ماذا نقدم؟</small>
+      <h2 data-ar="خدماتنا الإبداعية" data-en="Our Creative Services">خدماتنا الإبداعية</h2>
+      <p data-ar="كل ما تحتاجه لهوية إعلانية مميزة في مكان واحد."
+         data-en="Everything you need for a distinctive advertising identity in one place.">
+        كل ما تحتاجه لهوية إعلانية مميزة في مكان واحد.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon icon-blue">▧</div>
+        <h3 data-ar="الطباعة المتخصصة" data-en="Professional Printing">الطباعة المتخصصة</h3>
+        <p data-ar="بنر فلكس، استيكر، حرير، كانفس وجميع حلول الطباعة."
+           data-en="Flex banners, stickers, silk printing, canvas and more.">
+          بنر فلكس، استيكر، حرير، كانفس وجميع حلول الطباعة.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-orange">✂</div>
+        <h3 data-ar="قص الليزر والمجسمات" data-en="Laser Cutting & 3D">قص الليزر والمجسمات</h3>
+        <p data-ar="قص أسماء وتنفيذ مجسمات بأشكال وتصميمات مميزة."
+           data-en="Custom name cutting and creative 3D displays.">
+          قص أسماء وتنفيذ مجسمات بأشكال وتصميمات مميزة.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-purple">◇</div>
+        <h3 data-ar="دروع الأكريليك" data-en="Acrylic Awards">دروع الأكريليك</h3>
+        <p data-ar="تصميم وتنفيذ دروع أكريليك أنيقة للمناسبات والتكريم."
+           data-en="Elegant acrylic awards for events and recognition.">
+          تصميم وتنفيذ دروع أكريليك أنيقة للمناسبات والتكريم.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-teal">✧</div>
+        <h3 data-ar="الحروف المضيئة" data-en="Illuminated Letters">الحروف المضيئة</h3>
+        <p data-ar="حروف ولوحات مضيئة لإبراز اسم مشروعك."
+           data-en="Illuminated letters and signs to highlight your business.">
+          حروف ولوحات مضيئة لإبراز اسم مشروعك.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-orange">▤</div>
+        <h3 data-ar="أعمال الخامات المختلفة" data-en="Material Fabrication">أعمال الخامات المختلفة</h3>
+        <p data-ar="استانلس، زنكور، فلين وبلاستيك بتشطيبات متنوعة."
+           data-en="Stainless steel, zincor, foam and plastic fabrication.">
+          استانلس، زنكور، فلين وبلاستيك بتشطيبات متنوعة.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-blue">▣</div>
+        <h3 data-ar="التابلوهات واللوحات" data-en="Signs & Displays">التابلوهات واللوحات</h3>
+        <p data-ar="جميع أنواع التابلوهات الكلاسيك والمودرن."
+           data-en="All types of classic and modern signs and displays.">
+          جميع أنواع التابلوهات الكلاسيك والمودرن.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-heading">
+      <small data-ar="من أعمالنا" data-en="OUR PORTFOLIO">من أعمالنا</small>
+      <h2 data-ar="إبداعات تستحق المشاهدة" data-en="Creativity Worth Seeing">إبداعات تستحق المشاهدة</h2>
+      <p data-ar="مجموعة من الأعمال التي نفخر بتقديمها."
+         data-en="A selection of work we are proud to present.">
+        مجموعة من الأعمال التي نفخر بتقديمها.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.18 PM (5).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>01</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.18 PM.jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>02</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.19 PM (1).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>03</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.19 PM (4).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>04</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.20 PM (2).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>05</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.20 PM (3).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>06</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.20 PM.jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>07</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.21 PM (1).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>08</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.21 PM.jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>09</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.22 PM (1).jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>10</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.22 PM.jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>11</span></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-11-05 at 9.19.23 PM - Copy.jpeg" alt="عمل من دار الفنون" loading="lazy" onclick="openImage(this)"><span>12</span></div>
+    </div>
+  </div>
+</section>
+
+<style>
+.about-box {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 12px 35px #1725540a;
+}
+
+.about-icon {
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: #e8f7f6;
+  color: var(--teal);
+  font-size: 40px;
+}
+
+.about-box h3 {
+  color: var(--navy);
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.about-box p {
+  color: var(--muted);
+  line-height: 2;
+  font-size: 15px;
+}
+
+.services-section { background: #fff; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: #f8f9fd;
+  border: 1px solid #edf0f7;
+  border-radius: 22px;
+  padding: 27px 23px;
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px #17255412;
+  background: white;
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  font-size: 27px;
+  margin-bottom: 17px;
+}
+
+.icon-blue { background: #e8efff; color: var(--blue); }
+.icon-orange { background: #fff0e5; color: var(--orange); }
+.icon-purple { background: #f0ebff; color: var(--purple); }
+.icon-teal { background: #e4f8f5; color: var(--teal); }
+
+.service-card h3 {
+  color: var(--navy);
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.gallery-section {
+  background:
+    radial-gradient(circle at 90% 10%, #8064d812, transparent 25%),
+    var(--cream);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  position: relative;
+  height: 235px;
+  border-radius: 19px;
+  overflow: hidden;
+  background: #e7eaf2;
+  box-shadow: 0 8px 22px #17255412;
+  cursor: zoom-in;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.gallery-item:hover img { transform: scale(1.06); }
+
+.gallery-item span {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #172554c9;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 4px 11px;
+}
+
+@media (max-width: 800px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-item { height: 190px; }
+}
+
+@media (max-width: 480px) {
+  .services-grid { gap: 12px; }
+  .service-card { padding: 19px 15px; }
+  .service-card h3 { font-size: 15px; }
+  .service-card p { font-size: 13px; }
+  .gallery-grid { gap: 10px; }
+  .gallery-item { height: 155px; border-radius: 13px; }
+  .about-box { padding: 20px; flex-direction: column; text-align: center; }
+}
+.hero-image {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+</style>
+<!-- CONTACT SECTION -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <small data-ar="يسعدنا تواصلك" data-en="LET'S CONNECT">يسعدنا تواصلك</small>
+      <h2 data-ar="خلينا ننفذ فكرتك مع بعض" data-en="Let's Bring Your Idea to Life">خلينا ننفذ فكرتك مع بعض</h2>
+      <p data-ar="تواصل معنا وابدأ مشروعك الإعلاني بخطوة."
+         data-en="Contact us and take the first step towards your advertising project.">
+        تواصل معنا وابدأ مشروعك الإعلاني بخطوة.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-symbol">✉</div>
+      <h3 data-ar="دار الفنون للدعاية والإعلان" data-en="Dar Al Funoon Advertising">
+        دار الفنون للدعاية والإعلان
+      </h3>
+      <p data-ar="نحن هنا لمساعدتك في تحويل أفكارك إلى واقع."
+         data-en="We are here to turn your ideas into reality.">
+        نحن هنا لمساعدتك في تحويل أفكارك إلى واقع.
+      </p>
+
+      <div class="contact-details">
+  <a href="https://wa.me/966553860799" class="detail-link whatsapp" target="_blank">
+    واتساب: 0553860799
+  </a><a href="https://share.google/6O8YEw0pcJ91w9nPw" target="_blank" class="contact-link">
+  📍 موقعنا على الخريطة
+</a>
+
+  <a href="tel:+966552699507" class="detail-link phone">
+    الهاتف: 0552699507
+  </a>
+</div>
+      <div class="social-links">
+        <a href="https://wa.me/966553860799" target="_blank" class="social whatsapp">WhatsApp</a>
+        <a href="https://www.instagram.com/darfnoon?igsh=MXh4OGQ5Ym96amx0eQ==" target="_blank" class="social instagram">Instagram</a>
+        <a href="https://www.snapchat.com/add/darelfnoon" target="_blank" class="social snapchat">Snapchat</a>
+        <a href="https://www.facebook.com/share/1E8FJCxF18/" target="_blank" class="social facebook">Facebook</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE VIEWER -->
+<div class="image-viewer" id="imageViewer" onclick="closeImage()">
+  <button class="close-viewer" aria-label="Close" onclick="closeImage()">×</button>
+  <img id="viewerImage" src="" alt="صورة مكبرة">
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-content">
+    <a class="logo footer-logo" href="#">دار <span>الفنون</span></a>
+    <p data-ar="الإبداع • الجودة • التميز"
+       data-en="Creativity • Quality • Excellence">
+      الإبداع • الجودة • التميز
+    </p>
+    <p class="copyright">
+        <p>مدير الوكالة: سعيد دياب</p>
+      © 2026 Dar Al Funoon. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/966553860799" class="whatsapp-float" aria-label="WhatsApp" target="_blank">✆</a>
+
+<style>
+.contact-section {
+  background: linear-gradient(135deg, #edf2ff, #e9f9f6);
+}
+
+.contact-card {
+  background: white;
+  max-width: 760px;
+  margin: auto;
+  padding: 40px 25px;
+  text-align: center;
+  border-radius: 28px;
+  box-shadow: 0 18px 45px #17255410;
+}
+
+.contact-symbol {
+  width: 70px;
+  height: 70px;
+  margin: auto auto 17px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 33px;
+  color: var(--blue);
+  background: #eaf0ff;
+}
+
+.contact-card h3 {
+  color: var(--navy);
+  font-size: 23px;
+  margin-bottom: 9px;
+}
+
+.contact-card > p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.social {
+  padding: 11px 19px;
+  border-radius: 30px;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .25s;
+}
+
+.social:hover { transform: translateY(-4px); }
+
+.whatsapp { background: #20b878; }
+.instagram { background: #c04488; }
+.snapchat { background: #e5bd00; color: #222; }
+.facebook { background: #3867d6; }
+
+.contact-note { font-size: 12px; }
+
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.footer-logo { color: white; display: inline-block; }
+.footer-content > p { color: #d0d8ec; margin-top: 8px; font-size: 13px; }
+.copyright { opacity: .7; }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  left: 22px;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #20b878;
+  color: white;
+  font-size: 31px;
+  z-index: 200;
+  box-shadow: 0 8px 25px #20b87855;
+}
+
+.image-viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: #101729ed;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.image-viewer.active { display: flex; }
+
+.image-viewer img {
+  max-width: 92%;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  background: none;
+  border: 0;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+@media(max-width: 480px) {
+  .contact-card { padding: 30px 17px; }
+  .contact-card h3 { font-size: 19px; }
+  .social-links { gap: 8px; }
+  .social { padding: 10px 13px; font-size: 12px; }
+}
+.contact-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.detail-link {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: #e9f7f8;
+  color: #173b5e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.detail-link:hover {
+  background: #16b8b0;
+  color: white;
+  transform: translateY(-3px);
+}
+</style>
+
+<script>
+let currentLanguage = 'ar';
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-ar][data-en]').forEach(element => {
+    element.innerHTML = element.getAttribute('data-' + currentLanguage);
+  });
+
+  document.querySelector('.lang-btn').textContent =
+    currentLanguage === 'ar' ? 'EN' : 'AR';
+}
+
+function openImage(image) {
+  document.getElementById('viewerImage').src = image.src;
+  document.getElementById('imageViewer').classList.add('active');
+}
+
+function closeImage() {
+  document.getElementById('imageViewer').classList.remove('active');
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') closeImage();
+});
+</script>
+
+</body>
+</html>
